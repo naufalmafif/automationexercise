@@ -1,367 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221118 00:33:51.443" rpa="false" schemaversion="3">
-<suite id="s1" name="Register" source="D:\automationexercise\suites\register.robot">
-<test id="s1-t1" name="User Should Be Able To See Register." line="11">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221118 19:36:13.670" rpa="false" schemaversion="3">
+<suite id="s1" name="Logout" source="D:\automationexercise\suites\logout.robot">
+<test id="s1-t1" name="Logout User" line="10">
 <kw name="Open Chrome Browser" library="Base" type="SETUP">
 <doc>Keyword to open browser with chrome</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=headlesschrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 00:33:51.855" level="INFO">Opening browser 'headlesschrome' to base url 'https://automationexercise.com'.</msg>
-<status status="PASS" starttime="20221118 00:33:51.854" endtime="20221118 00:33:58.296"/>
+<msg timestamp="20221118 19:36:14.030" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationexercise.com'.</msg>
+<status status="PASS" starttime="20221118 19:36:14.029" endtime="20221118 19:36:23.187"/>
 </kw>
-<status status="PASS" starttime="20221118 00:33:51.854" endtime="20221118 00:33:58.296"/>
+<status status="PASS" starttime="20221118 19:36:14.028" endtime="20221118 19:36:23.188"/>
 </kw>
-<kw name="Navigate To Url Homepage" library="Register">
-<doc>Keyword to Navigate user to Register</doc>
+<kw name="Navigate To Home Page" library="Logout">
+<doc>Keyword to Navigate user to Home Page</doc>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221118 00:33:58.298" level="INFO">Opening url 'https://automationexercise.com'</msg>
-<status status="PASS" starttime="20221118 00:33:58.298" endtime="20221118 00:34:00.379"/>
+<msg timestamp="20221118 19:36:23.190" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<status status="PASS" starttime="20221118 19:36:23.190" endtime="20221118 19:36:28.804"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221118 00:34:00.379" endtime="20221118 00:34:00.487"/>
+<status status="PASS" starttime="20221118 19:36:28.804" endtime="20221118 19:36:28.924"/>
 </kw>
-<status status="PASS" starttime="20221118 00:33:58.297" endtime="20221118 00:34:00.487"/>
+<status status="PASS" starttime="20221118 19:36:23.189" endtime="20221118 19:36:28.924"/>
 </kw>
-<kw name="Verify that home page is visible successfully" library="Register">
-<doc>Verify current url is homepage url</doc>
+<kw name="Verify that home page is visible successfully" library="Logout">
+<doc>Verify that home page is visible successfully</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${logohomepage}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:00.596" level="INFO">Element '//*[@id="header"]/div/div/div/div[1]/div/a/img' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:00.489" endtime="20221118 00:34:00.597"/>
+<msg timestamp="20221118 19:36:29.029" level="INFO">Element '//*[@id="header"]/div/div/div/div[1]/div/a/img' is displayed.</msg>
+<status status="PASS" starttime="20221118 19:36:28.926" endtime="20221118 19:36:29.029"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:00.488" endtime="20221118 00:34:00.597"/>
+<status status="PASS" starttime="20221118 19:36:28.925" endtime="20221118 19:36:29.030"/>
 </kw>
-<kw name="Click on Signup/Login button" library="Register">
-<doc>Click on Signup/Login button</doc>
+<kw name="Click on 'Signup / Login' button" library="Logout">
+<doc>Click on 'Signup / Login' button</doc>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${signUpLoginButton}</arg>
+<arg>${signuplogin_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:00.600" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
-<status status="PASS" starttime="20221118 00:34:00.599" endtime="20221118 00:34:01.300"/>
+<msg timestamp="20221118 19:36:29.032" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20221118 19:36:29.031" endtime="20221118 19:36:29.826"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:00.598" endtime="20221118 00:34:01.300"/>
+<status status="PASS" starttime="20221118 19:36:29.030" endtime="20221118 19:36:29.826"/>
 </kw>
-<kw name="Verify New User Signup is visible" library="Register">
-<doc>Verify New User Signup is visible</doc>
+<kw name="Verify 'Login to your account' is visible" library="Logout">
+<doc>Verify 'Login to your account' is visible</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${newUserSignup_text}</arg>
+<arg>${login_section}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:01.406" level="INFO">Element '//*[@id="form"]/div/div/div[3]/div/h2' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:01.303" endtime="20221118 00:34:01.406"/>
+<msg timestamp="20221118 19:36:29.944" level="INFO">Element '//*[@id="form"]/div/div/div[1]/div/h2' is displayed.</msg>
+<status status="PASS" starttime="20221118 19:36:29.828" endtime="20221118 19:36:29.944"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:01.302" endtime="20221118 00:34:01.406"/>
+<status status="PASS" starttime="20221118 19:36:29.827" endtime="20221118 19:36:29.945"/>
 </kw>
-<kw name="Enter name in the Field Register Form" library="Register">
-<arg>name=${name}</arg>
-<doc>Enter name in the Field Register Form</doc>
+<kw name="Enter correct email address and password" library="Logout">
+<arg>email=${VALID_EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Enter correct email address and password</doc>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${name_loc}</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:01.412" level="INFO">Typing text 'Rafif' into text field '//*[@id="form"]/div/div/div[3]/div/form/input[2]'.</msg>
-<status status="PASS" starttime="20221118 00:34:01.410" endtime="20221118 00:34:01.633"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:01.409" endtime="20221118 00:34:01.633"/>
-</kw>
-<kw name="Enter email address in the Field Register Form" library="Register">
-<arg>email=${email}</arg>
-<doc>Enter email address in the Field Register Form</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${email_loc}</arg>
+<arg>${id_email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:01.635" level="INFO">Typing text 'rafifzaky@gmail.com' into text field '//*[@id="form"]/div/div/div[3]/div/form/input[3]'.</msg>
-<status status="PASS" starttime="20221118 00:34:01.635" endtime="20221118 00:34:01.773"/>
+<msg timestamp="20221118 19:36:29.948" level="INFO">Typing text 'rafif@gmail.com' into text field '//*[@id="form"]/div/div/div[1]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20221118 19:36:29.947" endtime="20221118 19:36:30.201"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:01.634" endtime="20221118 00:34:01.773"/>
-</kw>
-<kw name="Click 'Signup' button" library="Register">
-<doc>Click 'Signup' button</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${signup_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:01.775" level="INFO">Clicking element '//*[@id="form"]/div/div/div[3]/div/form/button'.</msg>
-<status status="PASS" starttime="20221118 00:34:01.775" endtime="20221118 00:34:02.416"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:01.774" endtime="20221118 00:34:02.416"/>
-</kw>
-<kw name="Verify that 'ENTER ACCOUNT INFORMATION' is visible" library="Register">
-<doc>Verify that 'ENTER ACCOUNT INFORMATION' is visible</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${enteraccountinfo_text}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:02.515" level="INFO">Element '//*[@id="form"]/div/div/div/div/h2/b' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:02.418" endtime="20221118 00:34:02.515"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:02.417" endtime="20221118 00:34:02.516"/>
-</kw>
-<kw name="Click Radio Button Title" library="Register">
-<doc>Click Radio Button Title</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${gender}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:02.518" level="INFO">Clicking element '//*[@id="form"]/div/div/div/div/form/div[1]/div[1]/label'.</msg>
-<status status="PASS" starttime="20221118 00:34:02.518" endtime="20221118 00:34:02.696"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:02.517" endtime="20221118 00:34:02.697"/>
-</kw>
-<kw name="Enter password in the Field Account Information" library="Register">
-<arg>password=${password}</arg>
-<doc>Enter password in the Field Account INFORMATION</doc>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${password_loc}</arg>
+<arg>${id_password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:02.701" level="INFO">Typing text 'rafif' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:02.700" endtime="20221118 00:34:02.839"/>
+<msg timestamp="20221118 19:36:30.202" level="INFO">Typing text 'rafif' into text field '//*[@id="form"]/div/div/div[1]/div/form/input[3]'.</msg>
+<status status="PASS" starttime="20221118 19:36:30.202" endtime="20221118 19:36:30.296"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:02.699" endtime="20221118 00:34:02.840"/>
+<status status="PASS" starttime="20221118 19:36:29.946" endtime="20221118 19:36:30.296"/>
 </kw>
-<kw name="Select date of Birth in the Field Account Information" library="Register">
-<doc>Select date of Birth in the Field Account Information</doc>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${day}</arg>
-<arg>4</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221118 00:34:02.842" level="INFO">Selecting options from selection list '//*[@id="days"]' by index 4.</msg>
-<status status="PASS" starttime="20221118 00:34:02.841" endtime="20221118 00:34:02.982"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${month}</arg>
-<arg>3</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221118 00:34:02.983" level="INFO">Selecting options from selection list '//*[@id="months"]' by index 3.</msg>
-<status status="PASS" starttime="20221118 00:34:02.982" endtime="20221118 00:34:03.111"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${year}</arg>
-<arg>20</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221118 00:34:03.112" level="INFO">Selecting options from selection list '//*[@id="years"]' by index 20.</msg>
-<status status="PASS" starttime="20221118 00:34:03.111" endtime="20221118 00:34:03.356"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:02.840" endtime="20221118 00:34:03.357"/>
-</kw>
-<kw name="Select checkbox 'Sign up for our newsletter!'" library="Register">
-<doc>Select checkbox 'Sign up for our newsletter!'</doc>
+<kw name="Click 'login' button" library="Logout">
+<doc>Click 'login' button</doc>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${newslatter}</arg>
+<arg>${login_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.359" level="INFO">Clicking element '//*[@id="newsletter"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.358" endtime="20221118 00:34:03.436"/>
+<msg timestamp="20221118 19:36:30.298" level="INFO">Clicking element '//*[@id="form"]/div/div/div[1]/div/form/button'.</msg>
+<status status="PASS" starttime="20221118 19:36:30.298" endtime="20221118 19:36:37.054"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:03.358" endtime="20221118 00:34:03.436"/>
+<status status="PASS" starttime="20221118 19:36:30.297" endtime="20221118 19:36:37.054"/>
 </kw>
-<kw name="Select checkbox 'Receive special offers from our partners!'" library="Register">
-<doc>Select checkbox 'Receive special offers from our partners!'</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${optin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.438" level="INFO">Clicking element '//*[@id="optin"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.438" endtime="20221118 00:34:03.515"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:03.437" endtime="20221118 00:34:03.515"/>
-</kw>
-<kw name="Enter First name in the Field Address Information" library="Register">
-<arg>firstname=${firstname}</arg>
-<doc>Enter First name in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${firstname_loc}</arg>
-<arg>${firstname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.518" level="INFO">Typing text 'afkari' into text field '//*[@id="first_name"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.517" endtime="20221118 00:34:03.634"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:03.516" endtime="20221118 00:34:03.635"/>
-</kw>
-<kw name="Enter Last name in the Field Address Information" library="Register">
-<arg>lastname=${lastname}</arg>
-<doc>Enter Last name in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${lastname_loc}</arg>
-<arg>${lastname}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.638" level="INFO">Typing text 'zaky' into text field '//*[@id="last_name"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.637" endtime="20221118 00:34:03.757"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:03.636" endtime="20221118 00:34:03.757"/>
-</kw>
-<kw name="Enter Company in the Field Address Information" library="Register">
-<arg>company=${company}</arg>
-<doc>Enter Company in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_company}</arg>
-<arg>${company}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.760" level="INFO">Typing text 'nuansa' into text field '//*[@id="company"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.759" endtime="20221118 00:34:03.891"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:03.758" endtime="20221118 00:34:03.891"/>
-</kw>
-<kw name="Enter Address in the Field Address Information" library="Register">
-<arg>address=${address}</arg>
-<doc>Enter Address in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_address}</arg>
-<arg>${address}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:03.893" level="INFO">Typing text 'jl. timoho' into text field '//*[@id="address1"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:03.893" endtime="20221118 00:34:04.038"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:03.892" endtime="20221118 00:34:04.038"/>
-</kw>
-<kw name="Enter Address 2 in the Field Address Information" library="Register">
-<arg>address=${address2}</arg>
-<doc>Enter Address 2 in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_address2}</arg>
-<arg>${address2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.042" level="INFO">Typing text 'jl. johar' into text field '//*[@id="address2"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.041" endtime="20221118 00:34:04.169"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.039" endtime="20221118 00:34:04.170"/>
-</kw>
-<kw name="Select Country in the Field Address Information" library="Register">
-<doc>Select Country in the Field Address Information</doc>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${country}</arg>
-<arg>5</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221118 00:34:04.173" level="INFO">Selecting options from selection list '//*[@id="country"]' by index 5.</msg>
-<status status="PASS" starttime="20221118 00:34:04.172" endtime="20221118 00:34:04.314"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.171" endtime="20221118 00:34:04.315"/>
-</kw>
-<kw name="Enter State in the Field Address Information" library="Register">
-<arg>state=${state}</arg>
-<doc>Enter State in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_state}</arg>
-<arg>${state}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.318" level="INFO">Typing text 'jakarta' into text field '//*[@id="state"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.317" endtime="20221118 00:34:04.444"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.316" endtime="20221118 00:34:04.445"/>
-</kw>
-<kw name="Enter City in the Field Address Information" library="Register">
-<arg>city=${city}</arg>
-<doc>Enter City in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_city}</arg>
-<arg>${city}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.447" level="INFO">Typing text 'jakarta pusat' into text field '//*[@id="city"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.447" endtime="20221118 00:34:04.590"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.446" endtime="20221118 00:34:04.590"/>
-</kw>
-<kw name="Enter Zipcode in the Field Address Information" library="Register">
-<arg>zipcode=${zipcode}</arg>
-<doc>Enter Zipcode in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_zipcode}</arg>
-<arg>${zipcode}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.593" level="INFO">Typing text '10540' into text field '//*[@id="zipcode"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.592" endtime="20221118 00:34:04.718"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.591" endtime="20221118 00:34:04.718"/>
-</kw>
-<kw name="Enter Mobile Number in the Field Address Information" library="Register">
-<arg>mobilephone=${mobilephone}</arg>
-<doc>Enter Mobile Number in the Field Address Information</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${id_mobilephone}</arg>
-<arg>${mobilephone}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.721" level="INFO">Typing text '08999922222' into text field '//*[@id="mobile_number"]'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.720" endtime="20221118 00:34:04.853"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.719" endtime="20221118 00:34:04.854"/>
-</kw>
-<kw name="Click Create Account Button" library="Register">
-<doc>Click Create Account Button</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${createaccount_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:04.856" level="INFO">Clicking element '//*[@id="form"]/div/div/div/div/form/button'.</msg>
-<status status="PASS" starttime="20221118 00:34:04.856" endtime="20221118 00:34:06.878"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:04.855" endtime="20221118 00:34:06.878"/>
-</kw>
-<kw name="Verify that 'ACCOUNT CREATED!' is visible" library="Register">
-<doc>Verify that 'ACCOUNT CREATED!' is visible</doc>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${account_created}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:06.978" level="INFO">Element '//*[@id="form"]/div/div/div/h2/b' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:06.880" endtime="20221118 00:34:06.978"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:06.879" endtime="20221118 00:34:06.978"/>
-</kw>
-<kw name="Click 'Continue' button" library="Register">
-<doc>Click 'Continue' button</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${continue_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:06.981" level="INFO">Clicking element '//*[@id="form"]/div/div/div/div/a'.</msg>
-<status status="PASS" starttime="20221118 00:34:06.980" endtime="20221118 00:34:10.515"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:06.979" endtime="20221118 00:34:10.515"/>
-</kw>
-<kw name="Verify that 'Logged in as username' is visible" library="Register">
+<kw name="Verify that 'Logged in as username' is visible" library="Logout">
 <doc>Verify that 'Logged in as username' is visible</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${loggedinas}</arg>
+<arg>${loggedin_section}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:10.559" level="INFO">Element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[10]/a' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:10.517" endtime="20221118 00:34:10.559"/>
+<msg timestamp="20221118 19:36:37.086" level="INFO">Element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[10]/a' is displayed.</msg>
+<status status="PASS" starttime="20221118 19:36:37.057" endtime="20221118 19:36:37.086"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:10.516" endtime="20221118 00:34:10.560"/>
+<status status="PASS" starttime="20221118 19:36:37.056" endtime="20221118 19:36:37.086"/>
 </kw>
-<kw name="Click Delete Account" library="Register">
-<doc>Click Delete Account</doc>
+<kw name="Click 'Logout' button" library="Logout">
+<doc>Click 'Logout' button</doc>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${delete_account}</arg>
+<arg>${logout_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:10.571" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[5]/a'.</msg>
-<status status="PASS" starttime="20221118 00:34:10.570" endtime="20221118 00:34:11.234"/>
+<msg timestamp="20221118 19:36:37.088" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20221118 19:36:37.088" endtime="20221118 19:36:38.093"/>
 </kw>
-<status status="PASS" starttime="20221118 00:34:10.568" endtime="20221118 00:34:11.234"/>
+<status status="PASS" starttime="20221118 19:36:37.088" endtime="20221118 19:36:38.094"/>
 </kw>
-<kw name="Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button" library="Register">
-<doc>Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button</doc>
+<kw name="Verify that user is navigated to login page" library="Logout">
+<doc>Verify that user is navigated to login page</doc>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${account_deleted}</arg>
+<arg>${login_page}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221118 00:34:11.328" level="INFO">Element '//*[@id="form"]/div/div/div/h2/b' is displayed.</msg>
-<status status="PASS" starttime="20221118 00:34:11.237" endtime="20221118 00:34:11.329"/>
+<msg timestamp="20221118 19:36:38.187" level="INFO">Element '//*[@id="form"]/div/div/div[1]/div' is displayed.</msg>
+<status status="PASS" starttime="20221118 19:36:38.097" endtime="20221118 19:36:38.187"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${continue_button2}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221118 00:34:11.330" level="INFO">Clicking element '//*[@id="form"]/div/div/div/div/a'.</msg>
-<status status="PASS" starttime="20221118 00:34:11.329" endtime="20221118 00:34:14.246"/>
-</kw>
-<status status="PASS" starttime="20221118 00:34:11.236" endtime="20221118 00:34:14.247"/>
+<status status="PASS" starttime="20221118 19:36:38.095" endtime="20221118 19:36:38.187"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221118 00:34:14.248" endtime="20221118 00:34:16.643"/>
+<status status="PASS" starttime="20221118 19:36:38.188" endtime="20221118 19:36:40.571"/>
 </kw>
-<doc>Test to verify that user should be able to see Register</doc>
-<status status="PASS" starttime="20221118 00:33:51.851" endtime="20221118 00:34:16.644"/>
+<doc>Test to verify that user should be able to Logout with valid data</doc>
+<status status="PASS" starttime="20221118 19:36:14.026" endtime="20221118 19:36:40.571"/>
 </test>
-<doc>Register test cases</doc>
-<status status="PASS" starttime="20221118 00:33:51.446" endtime="20221118 00:34:16.646"/>
+<doc>Logout test cases</doc>
+<status status="PASS" starttime="20221118 19:36:13.670" endtime="20221118 19:36:40.574"/>
 </suite>
 <statistics>
 <total>
@@ -370,7 +134,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Register">Register</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Logout">Logout</stat>
 </suite>
 </statistics>
 <errors>

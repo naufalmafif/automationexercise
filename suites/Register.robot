@@ -37,5 +37,5 @@ User Should Be Able To See Register.
     Verify that 'ACCOUNT CREATED!' is visible
     Click 'Continue' button
     Verify that 'Logged in as username' is visible
-    Click Delete Account
-    Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
+    # Click Delete Account
+    # Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button

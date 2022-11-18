@@ -7,7 +7,7 @@ Variables             registerpage_locators.yaml
 *** Variables ***
 ${HOMEPAGE_URL}     https://automationexercise.com
 ${name}             Rafif
-${email}            rafifzaky@gmail.com
+${email}            rafif@gmail.com
 ${password}         rafif
 ${firstname}        afkari
 ${lastname}         zaky

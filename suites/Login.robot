@@ -7,14 +7,24 @@ Test Setup          Base.Open Chrome Browser
 Test Teardown       Close Browser
 
 *** Test Cases ***
-User Should Be Able To See Login Page
-    [Documentation]         Test to verify that user should be able to see login page
-    Navigate To Login Page
-    Verify Login Section Appears
-
-User Should Be Able To Login With Valid Data
+Login User with correct email and password
     [Documentation]         Test to verify that user should be able to Login with valid data
-    Navigate To Login Page
-    Input User Email Address        user_email=${VALID_EMAIL}
-    Input User Password Email       user_password=${PASSWORD}
-    Click SignIn Button 
+    Navigate To Home Page
+    Verify that home page is visible successfully
+    Click on 'Signup / Login' button
+    Verify 'Login to your account' is visible
+    Enter correct email address and password        email=${VALID_EMAIL}    password=${PASSWORD}
+    Click 'login' button
+    Verify that 'Logged in as username' is visible
+    Click 'Delete Account' button
+    Verify that 'ACCOUNT DELETED!' is visible
+
+Login User with incorrect email and password
+    [Documentation]         Test to verify that user should be able to Login with invalid data
+    Navigate To Home Page
+    Verify that home page is visible successfully
+    Click on 'Signup / Login' button
+    Verify 'Login to your account' is visible
+    Enter incorrect email address and password        email=${INVALID_EMAIL}    password=${PASSWORD}
+    Click 'login' button
+    Verify error 'Your email or password is incorrect!' is visible

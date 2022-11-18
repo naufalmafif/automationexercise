@@ -1,10 +1,9 @@
 logohomepage: //*[@id="header"]/div/div/div/div[1]/div/a/img
 signuplogin_button: //*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a
 login_section: //*[@id="form"]/div/div/div[1]/div/h2
-incorrect_section: //*[@id="form"]/div/div/div[1]/div/form/p
 id_email: //*[@id="form"]/div/div/div[1]/div/form/input[2]
 id_password: //*[@id="form"]/div/div/div[1]/div/form/input[3]
 login_button: //*[@id="form"]/div/div/div[1]/div/form/button
 loggedin_section: //*[@id="header"]/div/div/div/div[2]/div/ul/li[10]/a
-delete_acc: //*[@id="header"]/div/div/div/div[2]/div/ul/li[5]/a
-account_deleted: //*[@id="form"]/div/div/div/h2/b
+logout_button: //*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a
+login_page: //*[@id="form"]/div/div/div[1]/div
